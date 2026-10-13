@@ -10,6 +10,7 @@ col3, col4 = st.columns(2)
 col5, col6 = st.columns(2)
 col7, col8 = st.columns(2)
 col9, col10 = st.columns(2)
+col11, col12 = st.columns(2)
 
 st.markdown("""
 <style>
@@ -38,26 +39,29 @@ with col4:
         st.switch_page("pages/compress_pymupdf.py")
 
 with col5:
-    if st.button("🖼 Image → PDF", use_container_width=True):
+    if st.button("🖼️ Image → PDF", use_container_width=True):
         st.switch_page("pages/image.py")
 
 with col6:
+    if st.button("PDF → 🖼️ Image", use_container_width=True):
+        st.switch_page("pages/pdf_image.py")
+
+with col7:
     if st.button("📄 PDF → Word", use_container_width=True):
         st.switch_page("pages/word.py")
 
-with col7:
+with col8:
     if st.button("📄 PDF → Word + OCR", use_container_width=True):
         st.switch_page("pages/word_ocr.py")
 
-with col8:
+with col9:
     if st.button("📄 PDF Metadata", use_container_width=True):
         st.switch_page("pages/metadata.py")
         
-with col9:
+with col10:
     if st.button("📄 Word → PDF + metadata", use_container_width=True):
         st.switch_page("pages/word_metadata.py")
         
-with col10:
-    if st.button("📄 PDF Unlock", use_container_width=True):
+with col11:
+    if st.button("� PDF Unlock", use_container_width=True):
         st.switch_page("pages/unlock.py")
-        
